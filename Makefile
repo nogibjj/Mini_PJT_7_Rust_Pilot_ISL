@@ -15,6 +15,9 @@ lint:
 test:
 	cargo test 
 
+check:
+	cargo check
+
 run:
 	cargo run
 
