@@ -4,7 +4,8 @@ use clap::Parser; // Import the Parser trait from the clap crate to parse comman
 #[derive(Parser, Debug)] // Derive the Parser trait for Args to enable parsing and Debug for printing
 #[command(version = "1.0", about = "calculator")] // Metadata: version and description of the command-line tool
 struct Args {
-    #[command(subcommand)] // This specifies that Args contains a subcommand (like add, multiply, etc.)
+    #[command(subcommand)]
+    // This specifies that Args contains a subcommand (like add, multiply, etc.)
     command: Commands, // Store the subcommand in the command field
 }
 
@@ -32,6 +33,20 @@ fn main() {
             } else {
                 println!("Division: {}", a / b);
             }
+        }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_add() {
+        let result = Commands::Add { a: 2, b: 3 };
+        match result {
+            Commands::Add { a, b } => assert_eq!(a + b, 5), // 2 + 3 = 5
+            _ => panic!("Unexpected command"),
         }
     }
 }
