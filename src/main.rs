@@ -13,8 +13,8 @@ struct Args {
 #[derive(Parser, Debug)] // Derive the Parser and Debug traits for Commands
 enum Commands {
     Add { a: i64, b: i64 },
-    Multiply { a: i64, b: i64 },
     Subtract { a: i64, b: i64 },
+    Multiply { a: i64, b: i64 },
     Divide { a: i64, b: i64 },
 }
 
@@ -24,15 +24,10 @@ fn main() {
     // Match the parsed subcommand and execute the appropriate code for each case
     match args.command {
         Commands::Add { a, b } => println!("Sum: {}", a + b),
-        Commands::Multiply { a, b } => println!("Product: {}", a * b),
         Commands::Subtract { a, b } => println!("Subtraction: {}", a - b),
+        Commands::Multiply { a, b } => println!("Product: {}", a * b),
         Commands::Divide { a, b } => {
-            // If 'divide' is used, check if b is zero to avoid division by zero
-            if b == 0 {
-                println!("Error: Division by zero is not allowed.");
-            } else {
-                println!("Division: {}", a / b);
-            }
+            println!("Division: {}", a / b)
         }
     }
 }
