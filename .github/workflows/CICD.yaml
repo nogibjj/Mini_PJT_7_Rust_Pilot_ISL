@@ -34,17 +34,15 @@ jobs:
     - name: Release
       run: cargo build --release
 
-    - name : Make folder
-      run : mkdir -p data
-
-    - name : Send binary data to data folder
-      run : cp target/release/Mini_PJT_7_Rust_ISL ./data/
-
-    - name: Upload Binary Artifact
-      uses: actions/upload-artifact@v4 #v3 is scheduled for deprecation Nov 30 2024 check marketplace
+    - name: Artifact upload preparation
+      run: mkdir -p data && cp target/release/Mini_PJT_7_Rust_ISL ./data/
+      
+    - name: Upload Binary Artifact to Github
+      uses: actions/upload-artifact@v4
       with:
         name: Mini_PJT_7_Rust_ISL
         path: data/Mini_PJT_7_Rust_ISL
+    
 
 # from John
 
