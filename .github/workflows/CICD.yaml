@@ -34,14 +34,14 @@ jobs:
     - name: Release
       run: cargo build --release
 
-    - name: Artifact upload preparation
-      run: mkdir -p binary && cp /Mini_PJT_7_Rust_ISL ./binary/
+    # - name: Artifact upload preparation
+    #   run: mkdir -p binary && cp /Mini_PJT_7_Rust_ISL ./binary/
       
     - name: Upload Binary Artifact to Github
       uses: actions/upload-artifact@v4
       with:
         name: Mini_PJT_7_Rust_ISL
-        path: binary/Mini_PJT_7_Rust_ISL
+        path: target/release/binary/Mini_PJT_7_Rust_ISL
     
 
 # from John
