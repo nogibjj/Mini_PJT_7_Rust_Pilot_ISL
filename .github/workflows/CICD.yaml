@@ -41,7 +41,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: Mini_PJT_7_Rust_ISL
-        path: data/Mini_PJT_7_Rust_ISL
+        path: Data/Mini_PJT_7_Rust_ISL
     
 
 # from John
