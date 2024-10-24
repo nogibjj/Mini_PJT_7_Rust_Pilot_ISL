@@ -39,7 +39,14 @@ Mini_PJT_7_Rust_Pilot_ISL
    └─ main.rs
 
 ```
+- `Cargo.tolm` : 
+- `main.rs` :
+----------
+
+* ***Package tool***
+* ***Written Guide***
+* ***Binary file as an artifact in CI/CD***
 
 ----------
-### Command-Line Tool Feature
-* Extract : The process retrieves two datasets(`HR_1.csv`
+### Reference
+* https://github.com/noahgift/rust-new-project-template/blob/main/README.md

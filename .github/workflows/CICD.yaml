@@ -35,7 +35,7 @@ jobs:
       run: cargo build --release
 
     - name: Artifact upload preparation
-      run: mkdir -p data && cp target/release/Mini_PJT_7_Rust_ISL ./data/
+      run: mkdir -p Data && cp target/release/Mini_PJT_7_Rust_ISL ./Data/
       
     - name: Upload Binary Artifact to Github
       uses: actions/upload-artifact@v4
