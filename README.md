@@ -60,7 +60,7 @@ Mini_PJT_7_Rust_Pilot_ISL
 
 - [4] Run the code : Perform basic arithmetric operations using two numbers and a chosen operation.
    [operation] : `add`, `multiply`, `subtract`, `divide`
-   [num1], [num2] : 연산할 숫자를 입력
+   [num1], [num2] : Put numbers to calculate
 
    ```bash
    cargo run -- [operation] [num1] [num2]
